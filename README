@@ -1,5 +1,37 @@
+GENERAL
+=======
+
 This package contains the firmware binaries for each loader program
-included in alsa-tools package.  Specify the same prefix option given
-to the alsa-tools configure script, too, in order to keep the
+included in alsa-tools package.  The firmware data can be used by each
+ALSA firmware loader program like vxloader, or passed through the
+hotplug firmware-loading mechanism.
+
+
+HOTPLUG FIRMWARE LOADER SUPPORT
+===============================
+
+The recent ALSA driver supports the hotplug firmware loader.
+As default, the package will install firmware data to the places for
+both the old ALSA fw loader and the hotplug fw loader.  To disable
+the installation of old ALSA fw loader data (if both ALSA and hotplug
+fw loaders are available), pass --disable-loader to configure.
+Similarly, to disable the hotplug fw loader data, pass
+--disable-hotplug option.
+
+For the old ALSA fw loader, specify the same prefix option given to
+the alsa-tools configure script, too, in order to keep the
 installation directories consistent.
 
+The default directory for hotplug firmware data files is
+/usr/lib/hotplug/firmware.  You can change to another path via
+--with-hotplug-dir option.
+
+
+LICENSE AND COPYRIGHT
+=====================
+
+The files contained in this package is regarded as the example data
+for each alsa-tools program.  Hence, their copyright and license
+follow basically to the definition of alsa-tools programs.  The
+detailed license and copyright is found in README of each
+subdirectory.
