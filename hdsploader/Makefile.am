@@ -21,9 +21,3 @@ digiface_firware.bin: tobin
 digiface_firmware_rev11.bin: tobin
 multiface_firmware.bin: tobin
 multiface_firmware_rev11.bin: tobin
-
-alsa-dist: distdir
-	@rm -rf ../distdir/$(MYNAME)
-	@mkdir -p ../distdir/$(MYNAME)
-	@cp -RLpv $(distdir)/* ../distdir/$(MYNAME)
-	@rm -rf $(distdir)
