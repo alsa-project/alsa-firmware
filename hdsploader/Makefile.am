@@ -1,18 +1,33 @@
 # # Process this file with automake to produce Makefile.in.
 MYNAME = hdsploader
 
-firmwaredir = $(datadir)/alsa/firmware/$(MYNAME)
-firmware_DATA = digiface_firmware.bin \
+dsp_files = digiface_firmware.bin \
 		digiface_firmware_rev11.bin \
 		multiface_firmware.bin \
 		multiface_firmware_rev11.bin
 
+if USE_LOADER
+firmwaredir = $(datadir)/alsa/firmware/$(MYNAME)
+firmware_DATA = $(dsp_files)
+else
+firmwaredir = 
+firmware_DATA = 
+endif
+
+if USE_HOTPLUG
+hotplugfwdir = @HOTPLUGFWDIR@
+hotplugfw_DATA = $(dsp_files)
+else
+hotplugfwdir =
+hotplugfw_DATA = 
+endif
+
 noinst_PROGRAMS = tobin
 tobin_SOURCES = tobin.c
 
-EXTRA_DIST = $(firmware_DATA:%.bin=%.dat) \
+EXTRA_DIST = $(dsp_files:%.bin=%.dat) \
 	     tobin.c
-CLEANFILES = $(firmware_DATA)
+CLEANFILES = $(dsp_files)
 
-$(firmware_DATA): tobin
+$(dsp_files): tobin
 	./tobin
