@@ -9,4 +9,5 @@ echo $VERSION > $srcdir/version
 AC_OUTPUT(Makefile \
 	  hdsploader/Makefile \
 	  mixartloader/Makefile \
+	  usx2yloader/Makefile \
 	  vxloader/Makefile)
