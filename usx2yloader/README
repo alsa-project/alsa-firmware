@@ -5,8 +5,26 @@ This directory contains the firmware data files for usx2yloader
 utility in alsa-tools package.  Install this with the same prefix
 option as you used for alsa-tools.
 
+BUILDING FIRMWARE FROM SOURCE
+=============================
+
+Building the firmware from source is possible, if you use the 
+configure option --enable-buildfw. Also, it requires the 8031/8051
+cross-assembler as31. As31 version 2.3.0 is fine for this job, but 
+every version since 2.2 should do it.
+
+As31 is available from:
+http://wiki.erazor-zone.de/doku.php?id=wiki:projects:linux:as31
+
+At the moment it's only possible to build tascam_loader.ihx from 
+source.
+
 COPYRIGHT
 =========
 
+tascam_loader.ihx, tascam_loader.asm and an2131.asm:
+Available under GPL without restrictions.
+
+other firmware files:
 Copyright (c) 2003 Tascam / TEAC Corporation.
 Distributable under GPL.
