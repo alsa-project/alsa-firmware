@@ -6,7 +6,15 @@ cfg_files = 	us122.conf us224.conf us428.conf \
 		tascam_loader.ihx \
 		us122fw.ihx us224fw.ihx us428fw.ihx
 
-EXTRA_DIST = $(cfg_files)
+if BUILD_FW
+bin_SCRIPTS = tascam_loader
+tascam_loader: 
+	$(AS31) $(AS31_FLAGS) -s tascam_loader.asm > tascam_loader.ihx
+endif
+
+EXTRA_DIST = $(cfg_files) \
+	tascam_loader.asm \
+	an2131.asm
 
 firmwaredir = $(datadir)/alsa/firmware/$(MYNAME)
 firmware_DATA = $(cfg_files)
