@@ -1,3 +1,5 @@
+MYNAME = vxloader
+
 cfg_files = vx222.conf vxboard.conf vxpocket.conf vxp440.conf \
 	bd56002.boot \
 	bd563s3.boot \
@@ -15,5 +17,11 @@ cfg_files = vx222.conf vxboard.conf vxpocket.conf vxp440.conf \
 
 EXTRA_DIST = $(cfg_files)
 
-firmwaredir = $(datadir)/alsa/firmware/vxloader
+firmwaredir = $(datadir)/alsa/firmware/$(MYNAME)
 firmware_DATA = $(cfg_files)
+
+alsa-dist: distdir
+	@rm -rf ../distdir/$(MYNAME)
+	@mkdir -p ../distdir/$(MYNAME)
+	@cp -RLpv $(distdir)/* ../distdir/$(MYNAME)
+	@rm -rf $(distdir)
