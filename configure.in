@@ -29,4 +29,5 @@ AC_OUTPUT(Makefile \
 	  hdsploader/Makefile \
 	  mixartloader/Makefile \
 	  usx2yloader/Makefile \
-	  vxloader/Makefile)
+	  vxloader/Makefile \
+	  pcxhrloader/Makefile)
