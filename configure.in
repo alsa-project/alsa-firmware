@@ -4,6 +4,8 @@ AC_PROG_CC
 AC_PROG_INSTALL
 AC_HEADER_STDC
 
+echo $VERSION > $srcdir/version
+
 AC_OUTPUT(Makefile \
 	  hdsploader/Makefile \
 	  mixartloader/Makefile \
