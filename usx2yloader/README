@@ -1,0 +1,12 @@
+GENRAL
+======
+
+This directory contains the firmware data files for usx2yloader
+utility in alsa-tools package.  Install this with the same prefix
+option as you used for alsa-tools.
+
+COPYRIGHT
+=========
+
+Copyright (c) 2003 Tascam / TEAC Corporation.
+Distributable under GPL.

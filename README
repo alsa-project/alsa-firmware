@@ -2,3 +2,4 @@ This package contains the firmware binaries for each loader program
 included in alsa-tools package.  Specify the same prefix option given
 to the alsa-tools configure script, too, in order to keep the
 installation directories consistent.
+
