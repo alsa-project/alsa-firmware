@@ -1,6 +1,4 @@
 # # Process this file with automake to produce Makefile.in.
-MYNAME = echoaudio
-
 firmware_files =	loader_dsp.fw \
 		darla20_dsp.fw \
 		gina20_dsp.fw \
@@ -66,12 +64,12 @@ EXTRA_DIST = 	DSP/LoaderDSP.c \
 CLEANFILES = $(firmware_files) fw_writer
 
 if USE_HOTPLUG
-hotplugfwdir = @HOTPLUGFWDIR@
+hotplugfwdir = @HOTPLUGFWDIR@/ea
 hotplugfw_DATA = $(firmware_files)
 else
 hotplugfwdir =
 hotplugfw_DATA = 
 endif
 
-$(firmware_DATA): fw_writer
+$(firmware_files): fw_writer
 	./fw_writer
