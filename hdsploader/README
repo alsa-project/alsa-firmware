@@ -1,0 +1,13 @@
+GENERAL
+=======
+
+This directory contains the firmware data files for hdsploader
+utility in alsa-tools package.  Install this with the same prefix
+option as you used for alsa-tools.
+
+
+COPYRIGHT
+=========
+
+Copyright (c) RME
+Distributable under GPL.
