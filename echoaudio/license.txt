@@ -1,0 +1,16 @@
+Copyright (c) 2004 Echo Digital Audio
+All rights reserved.
+www.echoaudio.com
+
+
+
+  This software may be distributed under the terms of the
+GNU General Public License ("GPL") version 2 as published by the Free
+Software Foundation (see below).
+
+
+  Echo Digital Audio does not disclose the source code from which these firmware 
+images are derived. Permission is hereby granted for the distribution of these 
+firmware images as part of the Linux kernel or other GPL project in text or binary 
+form as required.
+

@@ -30,4 +30,5 @@ AC_OUTPUT(Makefile \
 	  mixartloader/Makefile \
 	  usx2yloader/Makefile \
 	  vxloader/Makefile \
-	  pcxhrloader/Makefile)
+	  pcxhrloader/Makefile \
+	  echoaudio/Makefile)

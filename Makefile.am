@@ -1,6 +1,6 @@
 AUTOMAKE_OPTIONS = 1.3 foreign
 
-SUBDIRS = hdsploader mixartloader pcxhrloader usx2yloader vxloader
+SUBDIRS = hdsploader mixartloader pcxhrloader usx2yloader vxloader echoaudio
 
 EXTRA_DIST = depcomp
 
