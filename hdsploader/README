@@ -6,6 +6,14 @@ utility in alsa-tools package.  Install this with the same prefix
 option as you used for alsa-tools.
 
 
+DEFINITION OF FIRMWARE
+======================
+
+Verbatim copying and distribution of the firmware are permitted
+worldwide, without royalty, in any medium, provided this notice is
+preserved.
+
+
 COPYRIGHT
 =========
 
