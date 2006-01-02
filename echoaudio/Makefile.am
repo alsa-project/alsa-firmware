@@ -21,7 +21,6 @@ firmware_files =	loader_dsp.fw \
 		mona_361_1_asic_96.fw \
 		mona_2_asic.fw \
 		mia_dsp.fw \
-		gina3g_dsp.fw \
 		echo3g_dsp.fw \
 		3g_asic.fw \
 		indigo_dsp.fw \
@@ -53,7 +52,6 @@ EXTRA_DIST = 	DSP/LoaderDSP.c \
 		ASIC/Mona1ASIC96_361.c \
 		ASIC/Mona2ASIC.c \
 		DSP/MiaDSP.c \
-		DSP/Gina3gDSP.c \
 		DSP/Echo3gDSP.c \
 		ASIC/3G_ASIC.c \
 		DSP/IndigoDSP.c \

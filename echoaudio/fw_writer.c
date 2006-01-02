@@ -49,7 +49,6 @@ typedef uint16_t u16;
 #include "ASIC/Mona1ASIC96_361.c"
 #include "ASIC/Mona2ASIC.c"
 #include "DSP/MiaDSP.c"
-#include "DSP/Gina3gDSP.c"
 #include "DSP/Echo3gDSP.c"
 #include "ASIC/3G_ASIC.c"
 #include "DSP/IndigoDSP.c"
@@ -101,7 +100,6 @@ int main(void)
 	write_fw("mona_361_1_asic_96.fw", Mona1ASIC96_361, sizeof(Mona1ASIC96_361));
 	write_fw("mona_2_asic.fw", Mona2ASIC, sizeof(Mona2ASIC));
 	write_fw("mia_dsp.fw", MiaDSP, sizeof(MiaDSP));
-	write_fw("gina3g_dsp.fw", Gina3gDSP, sizeof(Gina3gDSP));
 	write_fw("echo3g_dsp.fw", Echo3gDSP, sizeof(Echo3gDSP));
 	write_fw("3g_asic.fw", echo3g_asic, sizeof(echo3g_asic));
 	write_fw("indigo_dsp.fw", IndigoDSP, sizeof(IndigoDSP));
