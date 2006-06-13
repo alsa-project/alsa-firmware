@@ -1,0 +1,20 @@
+GENERAL
+=======
+
+This directory contains the firmware data files for use with asihpi driver. 
+These files should be installed for use by hotplug firmware loader.
+
+
+DEFINITION OF FIRMWARE
+======================
+
+Verbatim copying and distribution of the firmware are permitted
+worldwide, without royalty, in any medium, provided this notice is
+preserved.
+
+
+COPYRIGHT
+=========
+
+Copyright (c) 2005 Audioscience <support@audioscience.com>
+Distributable under GPL.

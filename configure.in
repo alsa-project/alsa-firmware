@@ -43,4 +43,5 @@ AC_OUTPUT(Makefile \
 	  usx2yloader/Makefile \
 	  vxloader/Makefile \
 	  pcxhrloader/Makefile \
-	  echoaudio/Makefile)
+	  echoaudio/Makefile \
+	  asihpi/Makefile) 
