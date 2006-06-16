@@ -22,9 +22,10 @@ For the old ALSA fw loader, specify the same prefix option given to
 the alsa-tools configure script, too, in order to keep the
 installation directories consistent.
 
-The default directory for hotplug firmware data files is
-/usr/lib/hotplug/firmware.  You can change to another path via
---with-hotplug-dir option.
+The default directory for hotplug firmware data files is /lib/firmware.
+(or if existing /lib/hotplug/firmware or /usr/lib/hotplug/firmware are 
+found they are used)
+You can change to another path via --with-hotplug-dir option.
 
 
 LICENSE AND COPYRIGHT

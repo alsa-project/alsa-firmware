@@ -29,13 +29,26 @@ AM_CONDITIONAL(USE_LOADER, test "$loader" = "yes")
 AM_CONDITIONAL(USE_HOTPLUG, test "$hotplug" = "yes")
 AM_CONDITIONAL(BUILD_FW, test "$buildfw" = "yes")
 
+AC_MSG_CHECKING(firmware installation directory)
+# where to put the firmware. If none of these is right, can specify where
+# --with-hotplug-dir
+if test -d /lib/firmware ; then
+	detected_fwdir="/lib/firmware/"
+elif test -d /lib/hotplug/firmware ; then
+	detected_fwdir="/lib/hotplug/firmware/"
+elif test -d /usr/lib/hotplug/firmware ; then
+	detected_fwdir="/usr/lib/hotplug/firmware/"
+else
+	detected_fwdir="/lib/firmware/"
+fi
+
 AC_ARG_WITH(hotplug-dir,
   [  --with-hotplug-dir      Specify the hotplug firmware directory],
   [hotplugfwdir="$withval"],
-  [hotplugfwdir="/usr/lib/hotplug/firmware"])
+  [hotplugfwdir="$detected_fwdir"])
 HOTPLUGFWDIR="$hotplugfwdir"
 AC_SUBST(HOTPLUGFWDIR)
-    
+AC_MSG_RESULT($HOTPLUGFWDIR)
 
 AC_OUTPUT(Makefile \
 	  hdsploader/Makefile \
