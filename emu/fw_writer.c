@@ -28,6 +28,7 @@ typedef uint8_t u8;
 typedef uint16_t u16;
 
 #include "hana_netlist.h"
+#include "audio_dock_netlist.h"
 
 int write_fw(const char *name, void *fw, ssize_t size)
 {
@@ -52,6 +53,7 @@ int write_fw(const char *name, void *fw, ssize_t size)
 int main(void)
 {
 	write_fw("hana.fw", (void*)hana_netlist, sizeof(hana_netlist));
+	write_fw("audio_dock.fw", (void*)audio_dock_netlist, sizeof(audio_dock_netlist));
 	return 0;
 }
 
