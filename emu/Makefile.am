@@ -5,7 +5,8 @@ noinst_PROGRAMS = fw_writer
 fw_writer_SOURCES = fw_writer.c
 
 EXTRA_DIST = 	hana_netlist.h \
-		fw_writer.c
+		fw_writer.c \
+		audio_dock_netlist.h
 
 CLEANFILES = $(firmware_files) fw_writer
 
