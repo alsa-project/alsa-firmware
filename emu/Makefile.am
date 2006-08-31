@@ -1,5 +1,5 @@
 # # Process this file with automake to produce Makefile.in.
-firmware_files =	hana.fw 
+firmware_files =	hana.fw audio_dock.fw
 
 noinst_PROGRAMS = fw_writer
 fw_writer_SOURCES = fw_writer.c
