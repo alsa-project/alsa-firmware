@@ -25,6 +25,8 @@ ltmain.sh
 
 echoaudio/*.fw
 echoaudio/fw_writer
+emu/*.fw
+emu/fw_writer
 hdsploader/*.bin
 hdsploader/tobin
 vxloader/toxlx
