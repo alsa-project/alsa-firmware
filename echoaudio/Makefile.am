@@ -1,5 +1,5 @@
 # # Process this file with automake to produce Makefile.in.
-firmware_files =	loader_dsp.fw \
+firmware_files =	\
 		darla20_dsp.fw \
 		gina20_dsp.fw \
 		layla20_dsp.fw \
