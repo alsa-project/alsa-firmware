@@ -1,5 +1,6 @@
 # # Process this file with automake to produce Makefile.in.
 firmware_files =	\
+		loader_dsp.fw \
 		darla20_dsp.fw \
 		gina20_dsp.fw \
 		layla20_dsp.fw \
@@ -70,6 +71,7 @@ hotplugfw_DATA =
 endif
 
 $(firmware_files): fw_writer
+	./fw_writer DSP/LoaderDSP.c loader_dsp.fw
 	./fw_writer DSP/Darla20DSP.c darla20_dsp.fw
 	./fw_writer DSP/Gina20DSP.c gina20_dsp.fw
 	./fw_writer DSP/Layla20DSP.c layla20_dsp.fw
