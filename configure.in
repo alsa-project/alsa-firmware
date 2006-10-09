@@ -3,6 +3,7 @@ AC_INIT(hdsploader/tobin.c)
 AM_INIT_AUTOMAKE(alsa-firmware, 1.0.13)
 AC_PROG_CC
 AC_PROG_INSTALL
+AC_PROG_LN_S
 AC_HEADER_STDC
 
 echo $VERSION > $srcdir/version
@@ -57,6 +58,7 @@ AC_OUTPUT(Makefile \
 	  vxloader/Makefile \
 	  pcxhrloader/Makefile \
 	  echoaudio/Makefile \
+	  emi_26_62/Makefile \
 	  emu/Makefile \
 	  asihpi/Makefile \
 	  korg1212/Makefile \

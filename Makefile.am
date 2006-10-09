@@ -1,7 +1,7 @@
 AUTOMAKE_OPTIONS = 1.3 foreign
 
 SUBDIRS = hdsploader mixartloader pcxhrloader usx2yloader vxloader echoaudio \
-	  asihpi emu korg1212 maestro3 sb16 wavefront ymfpci
+	  asihpi emi_26_62 emu korg1212 maestro3 sb16 wavefront ymfpci
 
 EXTRA_DIST = depcomp
 
