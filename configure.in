@@ -58,4 +58,5 @@ AC_OUTPUT(Makefile \
 	  pcxhrloader/Makefile \
 	  echoaudio/Makefile \
 	  emu/Makefile \
-	  asihpi/Makefile) 
+	  asihpi/Makefile \
+	  ymfpci/Makefile)
