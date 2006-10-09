@@ -61,4 +61,5 @@ AC_OUTPUT(Makefile \
 	  asihpi/Makefile \
 	  korg1212/Makefile \
 	  maestro3/Makefile \
+	  sb16/Makefile \
 	  ymfpci/Makefile)
