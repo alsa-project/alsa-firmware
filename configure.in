@@ -62,4 +62,5 @@ AC_OUTPUT(Makefile \
 	  korg1212/Makefile \
 	  maestro3/Makefile \
 	  sb16/Makefile \
+	  wavefront/Makefile \
 	  ymfpci/Makefile)
