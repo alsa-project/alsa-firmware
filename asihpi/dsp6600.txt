@@ -1,1 +1,2 @@
-AX6600, version 018, size 612588, checksum 0x67D43A43 
+AX6600, version 049, size 582804, checksum 0x4CAACC08 
+
