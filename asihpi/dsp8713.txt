@@ -1,2 +1,2 @@
-AX8713, version 048, size 384864, checksum 0xE9238A3C 
+AX8713, version 30507, size 384864, checksum 0xECB388BC 
 
