@@ -29,6 +29,7 @@ typedef uint16_t u16;
 
 #include "hana_netlist.h"
 #include "audio_dock_netlist.h"
+#include "emu0404_netlist.h"
 
 int write_fw(const char *name, void *fw, ssize_t size)
 {
@@ -54,6 +55,7 @@ int main(void)
 {
 	write_fw("hana.fw", (void*)hana_netlist, sizeof(hana_netlist));
 	write_fw("audio_dock.fw", (void*)audio_dock_netlist, sizeof(audio_dock_netlist));
+	write_fw("emu0404.fw", (void*)emu0404_netlist, sizeof(emu0404_netlist));
 	return 0;
 }
 
