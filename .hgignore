@@ -29,6 +29,14 @@ emu/*.fw
 emu/fw_writer
 hdsploader/*.bin
 hdsploader/tobin
+maestro3/fw_writer
+maestro3/*.fw
+sb16/fw_writer
+sb16/*.csp
 vxloader/toxlx
 vxloader/*.xlx
+wavefront/fw_writer
+wavefront/*.bin
+ymfpci/fw_writer
+ymfpci/*.fw
 
