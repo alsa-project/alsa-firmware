@@ -9,7 +9,8 @@ dsp_files = \
 	dsp6205.bin\
 	dsp6413.bin\
 	dsp6600.bin\
-	dsp8713.bin
+	dsp8713.bin\
+	dsp8900.bin
 	
 dsp_txt_files = $(subst bin,txt,$(dsp_files))	
 
