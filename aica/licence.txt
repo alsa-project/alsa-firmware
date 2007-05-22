@@ -1,0 +1,8 @@
+This firmware is licenced under the KOS licence - a modified form of the BSD licence
+(for details see http://gamedev.allusion.net/softprj/kos/faq.php).
+
+It is fully and freely distributable provided the following notice is preserved somewhere
+in the code: Copyright (c) Dan Potter 2000.
+
+The code this firmware was built with is part of the KOS distribution and can also be
+reviewed here: http://linuxdc.cvs.sourceforge.net/linuxdc/linux-sh-dc/sound/oss/aica/firmware/
