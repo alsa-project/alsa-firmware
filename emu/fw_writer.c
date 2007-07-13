@@ -32,6 +32,7 @@ typedef uint16_t u16;
 #include "emu0404_netlist.h"
 #include "micro_dock_netlist.h"
 #include "emu1010_notebook_netlist.h"
+#include "emu1010b_netlist.h"
 
 int write_fw(const char *name, void *fw, ssize_t size)
 {
@@ -60,6 +61,7 @@ int main(void)
 	write_fw("emu0404.fw", (void*)emu0404_netlist, sizeof(emu0404_netlist));
 	write_fw("micro_dock.fw", (void*)micro_dock_netlist, sizeof(micro_dock_netlist));
 	write_fw("emu1010_notebook.fw", (void*)emu1010_notebook_netlist, sizeof(emu1010_notebook_netlist));
+	write_fw("emu1010b.fw", (void*)emu1010b_netlist, sizeof(emu1010b_netlist));
 	return 0;
 }
 
