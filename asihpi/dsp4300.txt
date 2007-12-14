@@ -1,2 +1,0 @@
-AX4300, version 30713, size 179604, checksum 0xFF3499CD 
-
