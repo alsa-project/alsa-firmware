@@ -2,7 +2,6 @@ MYNAME = asihpi
 
 dsp_files = \
 	dsp2400.bin\
-	dsp4100.bin\
 	dsp4300.bin\
 	dsp5000.bin\
 	dsp6200.bin\
