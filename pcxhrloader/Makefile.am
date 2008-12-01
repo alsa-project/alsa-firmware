@@ -1,6 +1,7 @@
 MYNAME = pcxhrloader
 
 cfg_files = \
+	pcxhr.conf	\
 	pcxhr0.conf	\
 	pcxhr1.conf	\
 	pcxhr2.conf	\
@@ -10,21 +11,26 @@ cfg_files = \
 dsp_files = \
 	xi_1_882.dat	\
 	xc_1_882.dat	\
-	xc_882e.dat	\
 	e321_512.e56	\
 	b321_512.b56	\
-	b882e.b56	\
 	d321_512.d56	\
-	xc_1222.dat	\
-	xc_1222e.dat	\
-	b1222.b56	\
-	b1222e.b56	\
-	d1222.d56	\
-	x1_222hr.dat	\
-	x1_924hr.dat	\
-	e924.e56	\
-	b924.b56	\
-	l_1_222.d56
+	xlxint.dat	\
+	xlxc882hr.dat	\
+	xlxc882e.dat	\
+	dspe882.e56	\
+	dspb882hr.b56	\
+	dspb882e.b56	\
+	dspd882.d56	\
+	xlxc1222hr.dat	\
+	xlxc1222e.dat	\
+	dspb1222hr.b56	\
+	dspb1222e.b56	\
+	dspd1222.d56	\
+	xlxc222.dat	\
+	xlxc924.dat	\
+	dspe924.e56	\
+	dspb924.b56	\
+	dspd222.d56
 
 EXTRA_DIST = $(cfg_files) $(dsp_files)
 
