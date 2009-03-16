@@ -26,7 +26,9 @@ firmware_files =	\
 		3g_asic.fw \
 		indigo_dsp.fw \
 		indigo_io_dsp.fw \
-		indigo_dj_dsp.fw
+		indigo_iox_dsp.fw \
+		indigo_dj_dsp.fw \
+		indigo_djx_dsp.fw
 
 noinst_PROGRAMS = fw_writer
 fw_writer_SOURCES = fw_writer.c
@@ -57,7 +59,9 @@ EXTRA_DIST = 	DSP/LoaderDSP.c \
 		ASIC/3G_ASIC.c \
 		DSP/IndigoDSP.c \
 		DSP/IndigoIODSP.c \
+		DSP/IndigoIOxDSP.c \
 		DSP/IndigoDJDSP.c \
+		DSP/IndigoDJxDSP.c \
 		fw_writer.c
 
 CLEANFILES = $(firmware_files) fw_writer
@@ -97,4 +101,6 @@ $(firmware_files): fw_writer
 	./fw_writer ASIC/3G_ASIC.c 3g_asic.fw
 	./fw_writer DSP/IndigoDSP.c indigo_dsp.fw
 	./fw_writer DSP/IndigoIODSP.c indigo_io_dsp.fw
+	./fw_writer DSP/IndigoIOxDSP.c indigo_iox_dsp.fw
 	./fw_writer DSP/IndigoDJDSP.c indigo_dj_dsp.fw
+	./fw_writer DSP/IndigoDJxDSP.c indigo_djx_dsp.fw
