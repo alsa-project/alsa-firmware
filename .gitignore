@@ -25,7 +25,10 @@ echoaudio/*.fw
 echoaudio/fw_writer
 emu/*.fw
 emu/fw_writer
-hdsploader/*.bin
+hdsploader/digiface_firmware.bin
+hdsploader/digiface_firmware_rev11.bin
+hdsploader/multiface_firmware.bin
+hdsploader/multiface_firmware_rev11.bin
 hdsploader/tobin
 maestro3/fw_writer
 maestro3/*.fw
