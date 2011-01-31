@@ -28,6 +28,7 @@ noinst_PROGRAMS = tobin
 tobin_SOURCES = tobin.c
 
 EXTRA_DIST = $(dsp_hex_files:%.bin=%.dat) \
+	     $(dsp_bin_files) \
 	     tobin.c
 CLEANFILES = $(dsp_hex_files)
 
