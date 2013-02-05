@@ -68,4 +68,5 @@ AC_OUTPUT(Makefile \
 	  wavefront/Makefile \
 	  ymfpci/Makefile \
 	  aica/Makefile \
+	  ca0132/Makefile \
 )

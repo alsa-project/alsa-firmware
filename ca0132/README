@@ -1,0 +1,5 @@
+This directory contains the firmware file for DSP on Creative CA0132
+(Sound Core3D) HD-audio codecs.  Put this file under the standard
+firmware directory (typically /lib/firmware).
+
+For the license, refer to creative.txt.
