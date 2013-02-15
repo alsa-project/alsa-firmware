@@ -58,7 +58,6 @@ AC_OUTPUT(Makefile \
 	  vxloader/Makefile \
 	  pcxhrloader/Makefile \
 	  echoaudio/Makefile \
-	  emi_26_62/Makefile \
 	  emu/Makefile \
 	  asihpi/Makefile \
 	  korg1212/Makefile \
