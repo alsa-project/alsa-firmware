@@ -1,4 +1,4 @@
-firmware_files = ctefx.bin
+firmware_files = ctefx.bin ctspeq.bin
 
 if USE_HOTPLUG
 hotplugfwdir = @HOTPLUGFWDIR@
