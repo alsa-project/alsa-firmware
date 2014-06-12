@@ -21,7 +21,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define WAIT_IDLE 0xff
+#define WAIT_IDLE 0xff, 0x00
 
 #include "yss225.c"
 
