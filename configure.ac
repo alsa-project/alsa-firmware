@@ -1,10 +1,10 @@
-AC_PREREQ(2.53)
-AC_INIT(hdsploader/tobin.c)
-AM_INIT_AUTOMAKE(alsa-firmware, 1.0.27)
+AC_PREREQ(2.59)
+AC_INIT(alsa-firmware, 1.0.27)
 AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_HEADER_STDC
+AM_INIT_AUTOMAKE
 
 echo $VERSION > $srcdir/version
 
