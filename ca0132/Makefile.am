@@ -1,4 +1,4 @@
-firmware_files = ctefx.bin ctspeq.bin
+firmware_files = ctefx.bin ctspeq.bin ctefx-desktop.bin ctefx-r3di.bin
 
 if USE_HOTPLUG
 hotplugfwdir = @HOTPLUGFWDIR@
