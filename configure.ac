@@ -1,5 +1,5 @@
 AC_PREREQ(2.59)
-AC_INIT(alsa-firmware, 1.0.29)
+AC_INIT(alsa-firmware, 1.2.1)
 AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_LN_S
