@@ -8,8 +8,8 @@ dsp_files = \
 	dsp6600.bin\
 	dsp8700.bin\
 	dsp8900.bin
-	
-EXTRA_DIST = $(dsp_files)
+
+EXTRA_DIST = $(dsp_files) licence.txt
 
 if USE_HOTPLUG
 hotplugfwdir = @HOTPLUGFWDIR@/asihpi

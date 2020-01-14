@@ -62,7 +62,8 @@ EXTRA_DIST = 	DSP/LoaderDSP.c \
 		DSP/IndigoIOxDSP.c \
 		DSP/IndigoDJDSP.c \
 		DSP/IndigoDJxDSP.c \
-		fw_writer.c
+		fw_writer.c \
+		license.txt
 
 CLEANFILES = $(firmware_files) fw_writer
 

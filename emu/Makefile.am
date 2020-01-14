@@ -10,7 +10,8 @@ EXTRA_DIST = 	hana_netlist.h \
 		emu0404_netlist.h \
 		micro_dock_netlist.h \
 		emu1010_notebook_netlist.h \
-		emu1010b_netlist.h
+		emu1010b_netlist.h \
+		license.txt
 
 CLEANFILES = $(firmware_files) fw_writer
 
