@@ -32,5 +32,13 @@ EXTRA_DIST = $(dsp_hex_files:%.bin=%.dat) \
 	     tobin.c
 CLEANFILES = $(dsp_hex_files)
 
+LINK_FOR_BUILD = $(CC_FOR_BUILD) $(CFLAGS_FOR_BUILD) $(CPPFLAGS_FOR_BUILD) $(LDFLAGS_FOR_BUILD) $(TARGET_ARCH_FOR_BUILD)
+$(tobin_OBJECTS) : CC=$(CC_FOR_BUILD)
+$(tobin_OBJECTS) : CFLAGS=$(CFLAGS_FOR_BUILD)
+$(tobin_OBJECTS) : CPPFLAGS=$(CPPFLAGS_FOR_BUILD)
+
+tobin: $(tobin_OBJECTS)
+	$(LINK_FOR_BUILD) $^ $(LDLIBS_FOR_BUILD) -o $@
+
 $(dsp_hex_files): tobin
 	./tobin
