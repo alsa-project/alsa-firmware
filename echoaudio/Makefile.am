@@ -75,6 +75,15 @@ hotplugfwdir =
 hotplugfw_DATA = 
 endif
 
+LINK_FOR_BUILD = $(CC_FOR_BUILD) $(CFLAGS_FOR_BUILD) $(CPPFLAGS_FOR_BUILD) $(LDFLAGS_FOR_BUILD) $(TARGET_ARCH_FOR_BUILD)
+
+$(fw_writer_OBJECTS) : CC=$(CC_FOR_BUILD)
+$(fw_writer_OBJECTS) : CFLAGS=$(CFLAGS_FOR_BUILD)
+$(fw_writer_OBJECTS) : CPPFLAGS=$(CPPFLAGS_FOR_BUILD)
+
+fw_writer: $(fw_writer_OBJECTS)
+	$(LINK_FOR_BUILD) $^ $(LDLIBS_FOR_BUILD) -o $@
+
 $(firmware_files): fw_writer
 	./fw_writer DSP/LoaderDSP.c loader_dsp.fw
 	./fw_writer DSP/Darla20DSP.c darla20_dsp.fw
