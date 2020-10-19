@@ -4,7 +4,7 @@ SUBDIRS = hdsploader mixartloader pcxhrloader usx2yloader vxloader echoaudio \
 	  asihpi emu korg1212 maestro3 multisound sb16 wavefront \
 	  ymfpci aica ca0132 cs46xx
 
-EXTRA_DIST = depcomp Makefile.fw_writer Makefile.hotplug
+EXTRA_DIST = depcomp Makefile.fw_writer Makefile.hotplug Makefile.loader
 
 dist-hook:
 	-chmod -R a+r $(distdir)

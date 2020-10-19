@@ -1,5 +1,4 @@
-MYNAME = pcxhrloader
-
+loader_dir = pcxhrloader
 firmware_dir = pcxhr
 
 cfg_files = \
@@ -33,15 +32,9 @@ firmware_files = \
 	dspe924.e56	\
 	dspb924.b56	\
 	dspd222.d56
+loader_files = $(cfg_files) $(firmware_files)
 
-EXTRA_DIST = $(cfg_files) $(firmware_files)
+EXTRA_DIST = $(loader_files)
 
-if USE_LOADER
-firmwaredir = $(datadir)/alsa/firmware/$(MYNAME)
-firmware_DATA = $(cfg_files) $(firmware_files)
-else
-firmwaredir = 
-firmware_DATA = 
-endif
-
+include ../Makefile.loader
 include ../Makefile.hotplug

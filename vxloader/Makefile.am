@@ -1,5 +1,3 @@
-MYNAME = vxloader
-
 cfg_files = vx222.conf vxboard.conf vxpocket.conf vxp440.conf
 
 dsp_files = \
@@ -21,6 +19,8 @@ rbt_files = \
 
 xlx_files = $(rbt_files:%.rbt=%.xlx)
 
+loader_dir = vxloader
+loader_files = $(cfg_files) $(dsp_files) $(rbt_files)
 firmware_dir = vx
 firmware_files = $(dsp_files) $(xlx_files)
 
@@ -30,14 +30,7 @@ toxlx_SOURCES = toxlx.c
 EXTRA_DIST = $(cfg_files) $(dsp_files) $(rbt_files) toxlx.c
 CLEANFILES = $(xlx_files)
 
-if USE_LOADER
-firmwaredir = $(datadir)/alsa/firmware/$(MYNAME)
-firmware_DATA = $(cfg_files) $(dsp_files) $(rbt_files)
-else
-firmwaredir = 
-firmware_DATA = 
-endif
-
+include ../Makefile.loader
 include ../Makefile.hotplug
 
 LINK_FOR_BUILD = $(CC_FOR_BUILD) $(CFLAGS_FOR_BUILD) $(CPPFLAGS_FOR_BUILD) $(LDFLAGS_FOR_BUILD) $(TARGET_ARCH_FOR_BUILD)

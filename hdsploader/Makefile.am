@@ -1,6 +1,4 @@
 # # Process this file with automake to produce Makefile.in.
-MYNAME = hdsploader
-
 dsp_hex_files = digiface_firmware.bin \
 		digiface_firmware_rev11.bin \
 		multiface_firmware.bin \
@@ -9,14 +7,8 @@ dsp_bin_files = rpm_firmware.bin
 
 firmware_dir = 
 firmware_files = $(dsp_hex_files) $(dsp_bin_files)
-
-if USE_LOADER
-firmwaredir = $(datadir)/alsa/firmware/$(MYNAME)
-firmware_DATA = $(firmware_files)
-else
-firmwaredir = 
-firmware_DATA = 
-endif
+loader_dir = hdsploader
+loader_files = $(firmware_files)
 
 noinst_PROGRAMS = fw_writer
 fw_writer_SOURCES = tobin.c
@@ -26,6 +18,7 @@ EXTRA_DIST = $(dsp_hex_files:%.bin=%.dat) \
 	     tobin.c
 CLEANFILES = $(dsp_hex_files)
 
+include ../Makefile.loader
 include ../Makefile.hotplug
 include ../Makefile.fw_writer
 

@@ -1,0 +1,11 @@
+#
+# Common parts for the firmware generation
+#
+
+if USE_LOADER
+firmwaredir = $(datadir)/alsa/firmware/$(loader_dir)
+firmware_DATA = $(loader_files)
+else
+firmwaredir = 
+firmware_DATA = 
+endif
