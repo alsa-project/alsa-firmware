@@ -1,6 +1,7 @@
 MYNAME = asihpi
 
-dsp_files = \
+firmware_dir = asihpi
+firmware_files = \
 	dsp5000.bin\
 	dsp6200.bin\
 	dsp6205.bin\
@@ -9,12 +10,6 @@ dsp_files = \
 	dsp8700.bin\
 	dsp8900.bin
 
-EXTRA_DIST = $(dsp_files) licence.txt
+EXTRA_DIST = $(firmware_files) licence.txt
 
-if USE_HOTPLUG
-hotplugfwdir = @HOTPLUGFWDIR@/asihpi
-hotplugfw_DATA = $(dsp_files)
-else
-hotplugfwdir =
-hotplugfw_DATA = 
-endif
+include ../Makefile.hotplug

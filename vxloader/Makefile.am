@@ -21,6 +21,9 @@ rbt_files = \
 
 xlx_files = $(rbt_files:%.rbt=%.xlx)
 
+firmware_dir = vx
+firmware_files = $(dsp_files) $(xlx_files)
+
 noinst_PROGRAMS = toxlx
 toxlx_SOURCES = toxlx.c
 
@@ -35,13 +38,7 @@ firmwaredir =
 firmware_DATA = 
 endif
 
-if USE_HOTPLUG
-hotplugfwdir = @HOTPLUGFWDIR@/vx
-hotplugfw_DATA = $(dsp_files) $(xlx_files)
-else
-hotplugfwdir =
-hotplugfw_DATA = 
-endif
+include ../Makefile.hotplug
 
 LINK_FOR_BUILD = $(CC_FOR_BUILD) $(CFLAGS_FOR_BUILD) $(CPPFLAGS_FOR_BUILD) $(LDFLAGS_FOR_BUILD) $(TARGET_ARCH_FOR_BUILD)
 

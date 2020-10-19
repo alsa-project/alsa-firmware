@@ -26,4 +26,3 @@ uninstall-hook:
 	rm -f $(DESTDIR)$(hotplugfwdir)/pndsperm.bin
 
 endif
-

@@ -68,6 +68,7 @@ EXTRA_DIST = 	DSP/LoaderDSP.c \
 
 CLEANFILES = $(firmware_files) fw_writer
 
+include ../Makefile.hotplug
 include ../Makefile.fw_writer
 
 $(firmware_files): fw_writer

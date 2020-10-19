@@ -2,14 +2,6 @@
 # Common parts for the firmware generation
 #
 
-if USE_HOTPLUG
-hotplugfwdir = @HOTPLUGFWDIR@/$(firmware_dir)
-hotplugfw_DATA = $(firmware_files)
-else
-hotplugfwdir =
-hotplugfw_DATA =
-endif
-
 LINK_FOR_BUILD = $(CC_FOR_BUILD) $(CFLAGS_FOR_BUILD) $(CPPFLAGS_FOR_BUILD) $(LDFLAGS_FOR_BUILD) $(TARGET_ARCH_FOR_BUILD)
 
 $(fw_writer_OBJECTS) : CC=$(CC_FOR_BUILD)

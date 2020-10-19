@@ -26,6 +26,7 @@ EXTRA_DIST = $(dsp_hex_files:%.bin=%.dat) \
 	     tobin.c
 CLEANFILES = $(dsp_hex_files)
 
+include ../Makefile.hotplug
 include ../Makefile.fw_writer
 
 $(firmware_files): fw_writer

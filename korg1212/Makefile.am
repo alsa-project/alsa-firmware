@@ -1,13 +1,8 @@
 # # Process this file with automake to produce Makefile.in.
 
-dsp_files = k1212.dsp
+firmware_dir = korg
+firmware_files = k1212.dsp
 
-EXTRA_DIST = $(dsp_files)
+EXTRA_DIST = $(firmware_files)
 
-if USE_HOTPLUG
-hotplugfwdir = @HOTPLUGFWDIR@/korg
-hotplugfw_DATA = $(dsp_files)
-else
-hotplugfwdir =
-hotplugfw_DATA =
-endif
+include ../Makefile.hotplug

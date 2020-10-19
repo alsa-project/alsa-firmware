@@ -16,6 +16,7 @@ EXTRA_DIST = 	hana_netlist.h \
 
 CLEANFILES = $(firmware_files) fw_writer
 
+include ../Makefile.hotplug
 include ../Makefile.fw_writer
 
 $(firmware_files): fw_writer

@@ -1,0 +1,11 @@
+#
+# Common parts for the firmware generation
+#
+
+if USE_HOTPLUG
+hotplugfwdir = @HOTPLUGFWDIR@/$(firmware_dir)
+hotplugfw_DATA = $(firmware_files)
+else
+hotplugfwdir =
+hotplugfw_DATA =
+endif
