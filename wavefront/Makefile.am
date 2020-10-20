@@ -8,10 +8,10 @@ fw_writer_SOURCES = fw_writer.c
 
 EXTRA_DIST = fw_writer.c yss225.c
 
-CLEANFILES = $(firmware_files) fw_writer
+CLEANFILES = $(firmware_files)
 
 include ../Makefile.hotplug
 include ../Makefile.fw_writer
 
-$(firmware_files): fw_writer
-	./fw_writer
+$(firmware_files): $(fw_writer)
+	./$(fw_writer)

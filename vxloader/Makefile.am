@@ -39,8 +39,10 @@ $(toxlx_OBJECTS) : CC=$(CC_FOR_BUILD)
 $(toxlx_OBJECTS) : CFLAGS=$(CFLAGS_FOR_BUILD)
 $(toxlx_OBJECTS) : CPPFLAGS=$(CPPFLAGS_FOR_BUILD)
 
-toxlx: $(toxlx_OBJECTS)
+toxlx = toxlx$(EXEEXT)
+
+$(toxlx): $(toxlx_OBJECTS)
 	$(LINK_FOR_BUILD) $^ $(LDLIBS_FOR_BUILD) -o $@
 
-%.xlx: %.rbt toxlx
+%.xlx: %.rbt $(toxlx)
 	./toxlx < $< > $@
