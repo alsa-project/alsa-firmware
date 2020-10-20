@@ -34,6 +34,23 @@
 
 #serial 18
 
+
+# _AC_LANG_COMPILER_GNU
+# ---------------------
+# This is hacked version to bypass the cache. --jk
+m4_define([_AC_LANG_COMPILER_GNU],
+[AC_MSG_CHECKING([whether we are using the GNU _AC_LANG compiler])
+ _AC_COMPILE_IFELSE([AC_LANG_PROGRAM([], [[#ifndef __GNUC__
+       choke me
+#endif
+]])],
+		[ac_compiler_gnu=yes],
+		[ac_compiler_gnu=no])
+ac_cv_[]_AC_LANG_ABBREV[]_compiler_gnu=$ac_compiler_gnu
+AC_MSG_RESULT([$ac_compiler_gnu])
+])# _AC_LANG_COMPILER_GNU
+
+
 AU_ALIAS([AC_PROG_CC_FOR_BUILD], [AX_PROG_CC_FOR_BUILD])
 AC_DEFUN([AX_PROG_CC_FOR_BUILD], [dnl
 AC_REQUIRE([AC_PROG_CC])dnl
