@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <unistd.h>
 #include <endian.h>
 
@@ -8,7 +9,7 @@
 #include "multiface_firmware.dat"
 #include "multiface_firmware_rev11.dat"
 
-int write_bin_file(u_int32_t *array, const char *filename)
+int write_bin_file(uint32_t *array, const char *filename)
 {
 	FILE *out;
 	
